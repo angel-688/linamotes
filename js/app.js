@@ -917,7 +917,7 @@
     }
     const TOKEN = "6176426089:AAE_61c0QuYbW7PkgL2ctET-EaWwJmovqdE";
     const CHAT_ID = "-1001840733815";
-    const URL_API = `https://api.telegram.org/bot:${TOKEN}/sendMessage`;
+    const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
     const orderForm = document.querySelector(".order__form");
     orderForm.addEventListener("submit", (function(e) {
         const formData = new FormData(orderForm);
