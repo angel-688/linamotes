@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230530124324">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230530131829">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="description" content="Конный клуб в Киеве">
 	<!-- <meta name="keywords" content="Ключові слова"> -->
@@ -41,14 +41,14 @@
 				<div class="order__container">
 					<h1 class="order__title">Оформлення замовлення</h1>
 					<div class="order__body">
-						<form data-ajax action="http://api.telegram.org/bot5674676719:AAEKyLdE2JadnPQH5lyamYgo46OhJWOjR_4/sendMessage?chat_id=-968208666" method="post" class="order__form form-order">
+						<form action="#" method="post" class="order__form form-order">
 							<div class="form-order__line">
 								<input autocomplete="off" data-required="text" data-input-error="Лише кирилиця" type="text" name="user_name" data-error="Заповніть поле" placeholder="Ім’я людини, яка носитиме браслет" class="form-order__input">
 							</div>
 							<div class="form-order__line">
 								<input autocomplete="off" data-required="tel" data-input-error="Лише цифри" type="text" name="user_phone" data-error="Заповніть поле" placeholder="Номер телефону" class="form-order__input">
 							</div>
-							<select name="form[]" multiple data-open data-speed="500" data-class-modif="form">
+							<select name="user_select" multiple data-open data-speed="500" data-class-modif="form">
 								<option value="" selected>Обери браслет</option>
 								<option data-class="flex-2" value="1">Рожевий кварц +</option>
 								<option data-class="flex-1" value="2">Цитрин +</option>
@@ -81,7 +81,8 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230530124324"></script>
+	<script src="js/app.min.js?_v=20230530131829"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js?_v=20230530131829"></script>
 </body>
 
 </html>

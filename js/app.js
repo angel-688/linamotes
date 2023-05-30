@@ -915,6 +915,30 @@
         if (activeLink) activeLink.classList.toggle("_active");
         link.classList.toggle("_active");
     }
+    const TOKEN = "AAEKyLdE2JadnPQH5lyamYgo46OhJWOjR_4";
+    const CHAT_ID = "-968208666";
+    const URL_API = `https://api.telegram.org/bot:${TOKEN}/sendMessage`;
+    const orderForm = document.querySelector(".order__form");
+    orderForm.addEventListener("submit", (function(e) {
+        e.preventDefault();
+        let message = `<b>Заявка linamotes </b>\n`;
+        message += `<b>Имя:</b>${this.user_name.value}\n`;
+        message += `<b>Номер телефона:</b>${this.user_email.value}\n`;
+        message += `<b>Браслет:</b>${this.user_select.value}\n`;
+        message += `<b>Город:</b>${this.user_city.value}\n`;
+        message += `<b>Отделение новой почты:</b>${this.user_pffice.value}\n`;
+        message += `<b>Пожелания:</b>${this.user_wishes.value}\n`;
+        message += `<b>Промо:</b>${this.user_promo.value}\n`;
+        axios.post(URL_API, {
+            chat_id: CHAT_ID,
+            parse_mode: "html",
+            text: message
+        }).then((res => {
+            orderForm.reset();
+        })).catch((err => {
+            console.warn(err);
+        }));
+    }));
     window["FLS"] = true;
     isWebp();
     menuInit();
