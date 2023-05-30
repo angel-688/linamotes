@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Задати питання</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230530124324">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="description" content="Конный клуб в Киеве">
+	<!-- <meta name="keywords" content="Ключові слова"> -->
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="index.html" class="header__logo-block">
+					<div class="header__logo-text">linamotes</div>
+					<div class="header__logo-text header__logo-text_pink">STORE</div>
+				</a>
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="index.html" class="menu__link">Головна</a></li>
+							<li class="menu__item"><a href="about.html" class="menu__link">Про мене</a></li>
+							<li class="menu__item"><a href="faq.html" class="menu__link">FAQ</a></li>
+							<li class="menu__item"><a href="order.html" class="menu__link">Оформити замовлення</a></li>
+						</ul>
+					</nav>
+				</div>
+				<a href="question.html" class="header__questions">?</a>
+			</div>
+		</header>
+		<main class="page-questions">
+			<section class="page-questions__questions question">
+				<div class="question__container">
+					<div class="questions__body question">
+						<h1 class="question__title">Задай своє питання!</h1>
+						<form action="#" class="question__form">
+							<div class="question__line">
+								<input autocomplete="off" data-required="text" data-input-error="Лише кирилиця" type="text" name="form[]" data-error="Заповніть поле" placeholder="Твоє ім’я " class="question__input">
+							</div>
+							<div class="question__line">
+								<input autocomplete="off" data-required="tel" data-input-error="Лише цифри" type="text" name="form[]" data-error="Заповніть поле" placeholder="Номер телефону" class="question__input">
+							</div>
+							<div class="question__line">
+								<textarea autocomplete="off" name="form[]" placeholder="Твоє запитання" class="question__textarea"></textarea>
+							</div>
+							<button type="submit" class="question__button">Відправити</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20230530124324"></script>
+</body>
+
+</html>

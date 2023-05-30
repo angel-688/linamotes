@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-	<title>HomePage</title>
+	<title>Оформлення замовлення</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230522173643">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230530124324">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="description" content="Конный клуб в Киеве">
 	<!-- <meta name="keywords" content="Ключові слова"> -->
@@ -18,24 +18,22 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
-				<a href="#" class="header__logo-block">
+				<a href="index.html" class="header__logo-block">
 					<div class="header__logo-text">linamotes</div>
 					<div class="header__logo-text header__logo-text_pink">STORE</div>
 				</a>
 				<div class="header__menu menu">
-					<a href="home.html" class="menu__icon icon-back"><svg viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M0.93934 10.9393C0.353553 11.5251 0.353553 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.93934 10.9393ZM4 10.5H2V13.5H4V10.5Z" fill="#F314A7" />
-						</svg></a>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link _active">Головна</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Про мене</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">FAQ</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Оформити замовлення</a></li>
+							<li class="menu__item"><a href="index.html" class="menu__link">Головна</a></li>
+							<li class="menu__item"><a href="about.html" class="menu__link">Про мене</a></li>
+							<li class="menu__item"><a href="faq.html" class="menu__link">FAQ</a></li>
+							<li class="menu__item"><a href="order.html" class="menu__link">Оформити замовлення</a></li>
 						</ul>
 					</nav>
 				</div>
-				<a href="# " class="header__questions">?</a>
+				<a href="question.html" class="header__questions">?</a>
 			</div>
 		</header>
 		<main class="page-order">
@@ -43,14 +41,23 @@
 				<div class="order__container">
 					<h1 class="order__title">Оформлення замовлення</h1>
 					<div class="order__body">
-						<form action="files/telegram.php" method="post" class="order__form form-order">
+						<form data-ajax action="http://api.telegram.org/bot5674676719:AAEKyLdE2JadnPQH5lyamYgo46OhJWOjR_4/sendMessage?chat_id=-968208666" method="post" class="order__form form-order">
 							<div class="form-order__line">
 								<input autocomplete="off" data-required="text" data-input-error="Лише кирилиця" type="text" name="user_name" data-error="Заповніть поле" placeholder="Ім’я людини, яка носитиме браслет" class="form-order__input">
 							</div>
 							<div class="form-order__line">
 								<input autocomplete="off" data-required="tel" data-input-error="Лише цифри" type="text" name="user_phone" data-error="Заповніть поле" placeholder="Номер телефону" class="form-order__input">
 							</div>
-
+							<select name="form[]" multiple data-open data-speed="500" data-class-modif="form">
+								<option value="" selected>Обери браслет</option>
+								<option data-class="flex-2" value="1">Рожевий кварц +</option>
+								<option data-class="flex-1" value="2">Цитрин +</option>
+								<option data-class="flex-2" value="3">Авантюрин +</option>
+								<option data-class="flex-1" value="4">Аметист +</option>
+								<option data-class="flex-1" value="5">Лава +</option>
+								<option data-class="flex-2" value="6">Місячний камінь +</option>
+								<option data-class="flex-1" value="7">Обсидіан +</option>
+							</select>
 							<div class="form-order__line">
 								<input autocomplete="off" type="text" name="user_city" placeholder="В яке місто буде доставка?" class="form-order__input">
 							</div>
@@ -74,7 +81,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230522173643"></script>
+	<script src="js/app.min.js?_v=20230530124324"></script>
 </body>
 
 </html>
