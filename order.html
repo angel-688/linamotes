@@ -6,13 +6,13 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230530153511">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230629175035">
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
 	<link rel="manifest" href="img/favicon_io/site.webmanifest">
-	<meta name="description" content="Конный клуб в Киеве">
+	<meta name="description" content="Магазин магічних браслетів">
 	<!-- <meta name="keywords" content="Ключові слова"> -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,22 +22,21 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
-				<a href="index.html" class="header__logo-block">
-					<div class="header__logo-text">linamotes</div>
-					<div class="header__logo-text header__logo-text_pink">STORE</div>
+				<a href="index.html" class="header__logo">
+					<img src="img/logo.svg" alt="">
 				</a>
 				<div class="header__menu menu">
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="index.html" class="menu__link">Головна</a></li>
-							<li class="menu__item"><a href="about.html" class="menu__link">Про мене</a></li>
-							<li class="menu__item"><a href="faq.html" class="menu__link">FAQ</a></li>
-							<li class="menu__item"><a href="order.html" class="menu__link">Оформити замовлення</a></li>
+							<li class="menu__item"><a data-link-id="index.html" href="index.html" class="menu__link _active">обрати браслет</a></li>
+							<li class="menu__item"><a data-link-id="about.html" href="about.html" class="menu__link">про мене</a></li>
+							<li class="menu__item"><a data-link-id="faq.html" href="faq.html" class="menu__link">питання</a></li>
+							<li class="menu__item"><a data-link-id="course.html" href="course.html" class="menu__link">курс по Таро</a></li>
+							<li class="menu__item"><a data-link-id="order.html" href="order.html" class="menu__link menu__link_course">оформити замовлення</a></li>
 						</ul>
 					</nav>
 				</div>
-				<a href="question.html" class="header__questions">?</a>
 			</div>
 		</header>
 		<main class="page-order">
@@ -45,36 +44,35 @@
 				<div class="order__container">
 					<h1 class="order__title">Оформлення замовлення</h1>
 					<div class="order__body">
-						<form action="#" method="post" class="order__form form-order">
+						<form data-ajax action="files/sendmessage.php" method="post" class="order__form form-order">
 							<div class="form-order__line">
-								<input autocomplete="off" data-required="text" data-input-error="Лише кирилиця" type="text" name="user_name" data-error="Заповніть поле" placeholder="Ім’я людини, яка носитиме браслет" class="form-order__input">
+								<input autocomplete="off" data-required="text" data-input-error="Лише букви" type="text" name="Ім`я" data-error="Заповніть поле" placeholder="Ім’я людини, яка носитиме браслет" class="form-order__input">
 							</div>
 							<div class="form-order__line">
-								<input autocomplete="off" data-required="tel" data-input-error="Лише цифри" type="text" name="user_phone" data-error="Заповніть поле" placeholder="Номер телефону" class="form-order__input">
+								<input autocomplete="off" data-required="tel" data-input-error="Лише цифри" type="text" name="Номер телефону" data-error="Заповніть поле" placeholder="Номер телефону" class="form-order__input">
 							</div>
-							<select name="user_select" multiple data-open data-speed="500" data-class-modif="form">
+							<select name="Камінь[]" multiple data-open data-speed="500" data-class-modif="form">
 								<option value="" selected>Обери браслет</option>
-								<option data-class="flex-2" value="1">Рожевий кварц +</option>
-								<option data-class="flex-1" value="2">Цитрин +</option>
-								<option data-class="flex-2" value="3">Авантюрин +</option>
-								<option data-class="flex-1" value="4">Аметист +</option>
-								<option data-class="flex-1" value="5">Лава +</option>
-								<option data-class="flex-2" value="6">Місячний камінь +</option>
-								<option data-class="flex-1" value="7">Обсидіан +</option>
+								<option data-select-id="pink-quartz" value="Рожевий кварц">Рожевий кварц +</option>
+								<option data-select-id="citrine" value="Цитрин">Цитрин +</option>
+								<option data-select-id="amethyst" value="Аметист">Аметист +</option>
+								<option data-select-id="green-aventurine" value="Авантюрин">Авантюрин +</option>
+								<option data-select-id="obsidian" value="Обсидіан">Обсидіан +</option>
+								<option data-select-id="lava" value="Лава">Лава +</option>
 							</select>
 							<div class="form-order__line">
-								<input autocomplete="off" type="text" name="user_city" placeholder="В яке місто буде доставка?" class="form-order__input">
+								<input autocomplete="off" type="text" name="Місто доставки" placeholder="В яке місто буде доставка?" class="form-order__input">
 							</div>
 							<div class="form-order__line">
-								<input autocomplete="off" type="text" name="user_office" placeholder="Відділення Нової Пошти №" class="form-order__input">
+								<input autocomplete="off" type="text" name="Відділення Нової Пошти" placeholder="Відділення Нової Пошти №" class="form-order__input">
 							</div>
 							<div class="form-order__line">
-								<input autocomplete="off" type="text" name="user_wishes" placeholder="Побажання (якщо є)" class="form-order__input">
+								<input autocomplete="off" type="text" name="Побажання" placeholder="Побажання (якщо є)" class="form-order__input">
 							</div>
 							<div class="form-order__line">
-								<input autocomplete="off" type="text" name="user_promo" placeholder="Маєш промокод?" class="form-order__input">
+								<input autocomplete="off" type="text" name="Промокод" placeholder="Маєш промокод?" class="form-order__input">
 							</div>
-							<button type="submit" class="form-order__button">Відправити</button>
+							<button type="submit" class="form-order__button button">Відправити</button>
 						</form>
 					</div>
 				</div>
@@ -85,7 +83,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230530153511"></script>
+	<script src="js/app.min.js?_v=20230629175035"></script>
 </body>
 
 </html>
